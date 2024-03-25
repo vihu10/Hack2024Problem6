@@ -1,0 +1,70 @@
+#Dictionary
+#https://www.espn.com/nba/stats/team/_/table/offensive/sort/avgPoints/dir/desc
+nba_teams = { 
+  "Los Angeles Lakers": {
+    "average_points_lifetime": 117.2
+    #Blocks
+    #Rebounds
+    #Steals
+  },
+  "Boston Celtics": {
+    "average_points_lifetime": 121.2
+  },
+  "Chicago Bulls": {
+    "average_points_lifetime": 112.1
+  },
+  "Golden State Warriors": {
+    "average_points_lifetime": 118.5
+  },
+  "San Antonio Spurs": {
+    "average_points_lifetime": 112.0
+  },
+  "Miami Heat": {
+    "average_points_lifetime": 109.4
+  },
+  "Dallas Mavericks": {
+    "average_points_lifetime": 118.6
+  },
+  "Detroit Pistons": {
+    "average_points_lifetime": 111.4
+  },
+  "Philadelphia 76ers": {
+    "average_points_lifetime": 114.4
+  },
+  "Houston Rockets": {
+    "average_points_lifetime": 114.3
+  }
+}
+print("Welcome to the")
+print('''███╗   ██╗██████╗  █████╗     ███╗   ███╗ █████╗ ████████╗ ██████╗██╗  ██╗      ██╗   ██╗██████╗      ██████╗ ██████╗ ██████╗ ███████╗
+████╗  ██║██╔══██╗██╔══██╗    ████╗ ████║██╔══██╗╚══██╔══╝██╔════╝██║  ██║      ██║   ██║██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+██╔██╗ ██║██████╔╝███████║    ██╔████╔██║███████║   ██║   ██║     ███████║█████╗██║   ██║██████╔╝    ██║     ██║   ██║██║  ██║█████╗  
+██║╚██╗██║██╔══██╗██╔══██║    ██║╚██╔╝██║██╔══██║   ██║   ██║     ██╔══██║╚════╝██║   ██║██╔═══╝     ██║     ██║   ██║██║  ██║██╔══╝  
+██║ ╚████║██████╔╝██║  ██║    ██║ ╚═╝ ██║██║  ██║   ██║   ╚██████╗██║  ██║      ╚██████╔╝██║         ╚██████╗╚██████╔╝██████╔╝███████╗
+╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝       ╚═════╝ ╚═╝          ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+                                                                                                                                      ''')
+print('''These are the teams you may match-up with:\n
+Los Angeles Lakers
+Boston Celtics
+Chicago Bulls
+Golden State Warriors
+San Antonio Spurs
+Miami Heat
+Dallas Mavericks
+Detroit Pistons
+Philadelphia 76ers
+Houston Rockets''')
+match = input("\nWhat two teams would you like to match-up? Ex: Miami Heat vs. Boston Celtics \n")
+team_1, team_2 = match.split(" vs. ")
+#print(team_1)
+#print(team_2)
+team_1_pts = nba_teams[team_1]['average_points_lifetime']
+team_2_pts = nba_teams[team_2]['average_points_lifetime']
+
+if team_1_pts > team_2_pts:
+  print(team_1 + " will most probably win.")
+elif team_2_pts > team_1_pts:
+  print(team_2 + " will most probably win.")
+
+else:
+  print("Error")
